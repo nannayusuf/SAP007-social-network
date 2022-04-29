@@ -19,4 +19,15 @@ export default function home() {
     return homePage
   
   }
-  
+
+  const userPosts = container.querySelector('.feed');
+
+
+  const showAllPosts = async () => {
+    const allPosts = await getPost();
+    allPosts.forEach((item) => {
+      const postElement = card(item);
+      userPosts.prepend(postElement);
+    });
+  };
+  showAllPosts();
