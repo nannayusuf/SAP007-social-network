@@ -34,7 +34,7 @@
 
 ## 3. Interface
 
-A interface do projeto foi desenhada para atender uma SPA(Single Page Application), que contém ao todo 3 páginas, sendo elas de login, cadastro e timeline.
+A interface do projeto foi desenhada para atender uma SPA(Single Page Application), que contém ao todo 4 páginas, sendo elas de login, cadastro e perfil de usuário e feed.
 
 A paleta de cores foi extraida da imagem principal da aplicação.
 ![paleta](./src/img/readme-img/palette.png)
