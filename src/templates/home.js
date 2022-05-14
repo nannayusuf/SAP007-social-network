@@ -1,6 +1,5 @@
 import { creatPost } from "../lib/firestore-firebase.js";
-import { userLogout } from "../lib/auth-firebase.js";
-import { auth } from "../lib/config-firebase.js";
+import { userLogout, auth } from "../lib/auth-firebase.js";
 import { showPosts } from "../componentes/template-post.js";
 
 export default function home() {
@@ -92,7 +91,7 @@ export default function home() {
   });
 
   // Todos os posts na tela
-  showPosts(homePage)
+  showPosts(homePage);
 
   // Função para sair da rede social
   const logOut = homePage.querySelector("#link-logoff");

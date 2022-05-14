@@ -1,6 +1,6 @@
 import { deletePost, getUserPosts } from "../lib/firestore-firebase.js";
 import edit from "./edit.js";
-import { auth } from "../lib/config-firebase.js";
+import { auth } from "../lib/auth-firebase.js";
 
 export function profilePosts(post) {
   const currentUser = auth.currentUser;
@@ -64,11 +64,11 @@ export function profilePosts(post) {
   return templateProfile;
 }
 
+// apenas os posts do usuario na tela
 export function printProfilePosts(profilePage) {
-  // apenas os posts do usuario na tela
   const uid = auth.currentUser.uid;
   const showPosts = profilePage.querySelector(".ul-posts");
-  showPosts.innerHTML = ''
+  showPosts.innerHTML = "";
   getUserPosts(uid).then((userPosts) => {
     userPosts.forEach((item) => {
       const postElement = profilePosts(item);

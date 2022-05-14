@@ -1,4 +1,5 @@
 import {
+  getFirestore,
   collection,
   getDocs,
   doc,
@@ -10,11 +11,12 @@ import {
   where,
   arrayRemove,
   arrayUnion,
-}
-  from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"; //eslint-disable-line
+} from "./exports.js";
 
-import { db, auth } from "./config-firebase.js";
-import { publishingPosts } from "../componentes/template-post.js"; // eslint-disable-line import/no-cycle
+import { app } from "./config-firebase.js";
+import { auth } from "./auth-firebase.js";
+
+export const db = getFirestore(app);
 
 export async function getPosts() {
   const arrPosts = [];
@@ -37,11 +39,9 @@ export function creatPost(message, titleHQ) {
     user: auth.currentUser.displayName,
     uid: auth.currentUser.uid,
     like: [],
-  }).then((docRef) => {
-    return {
-      id: docRef.id
-    }
-  });
+  }).then((docRef) => ({
+    id: docRef.id,
+  }));
 }
 
 // Função para deletar o post
@@ -83,14 +83,5 @@ export function dislike(id, user) {
   const post = doc(db, "posts", id);
   return updateDoc(post, {
     like: arrayRemove(user),
-  });
-}
-
-export function showPosts(showAllPosts) {
-  getPosts().then((allPosts) => {
-    allPosts.forEach((item) => {
-      const postElement = publishingPosts(item);
-      showAllPosts.prepend(postElement);
-    });
   });
 }

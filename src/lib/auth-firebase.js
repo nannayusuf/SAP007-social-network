@@ -1,4 +1,5 @@
 import {
+  getAuth,
   createUserWithEmailAndPassword,
   signInWithPopup,
   GoogleAuthProvider,
@@ -6,10 +7,9 @@ import {
   signOut,
   onAuthStateChanged,
   updateProfile,
-}
-  from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"; //eslint-disable-line
+} from "./exports.js";
 
-import { auth } from "./config-firebase.js";
+export const auth = getAuth();
 
 // Cadastrar um usuário com endereço de e-mail e senha
 export function registerUser(email, password) {
