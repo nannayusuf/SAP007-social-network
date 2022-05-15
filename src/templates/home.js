@@ -82,8 +82,8 @@ export default function home() {
     }
   });
 
-  /* Função para quando clickar no botão excluir da nova postagem, antes de enviar, 
-  o campo fique limpo*/
+  /* Função para quando clickar no botão excluir da nova postagem, antes de enviar,
+  o campo fique limpo */
   const deleteButton = homePage.querySelector("#delete-button");
   deleteButton.addEventListener("click", (e) => {
     e.preventDefault();

@@ -1,7 +1,7 @@
-import { Login } from "./login.js";
+import { signIn } from "./login.js";
 
 describe("SignIn", () => {
   it("should be a function", () => {
-    expect(typeof Login).toBe("function");
+    expect(typeof signIn).toBe("function");
   });
 });

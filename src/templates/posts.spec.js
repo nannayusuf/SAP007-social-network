@@ -1,7 +1,7 @@
 /*
 * @jest-environment jsdom
 */
-import { publicatedPost } from "../../../src/lib/firestore.js";
+import { publicatedPost } from "../../../src/lib/firestore.js"; // eslint-disable-line import/no-unresolved
 
 jest.mock("../../../src/lib/exports.js");
 jest.mock("../../../src/lib/firestore.js");
@@ -11,7 +11,7 @@ describe("publicatedPost", () => {
     publicatedPost.mockResolvedValueOnce();
     const title = "Jest";
     const text = "Jest é um framework de teste unitário de código aberto em JavaScript criado pelo Facebook a partir do framework Jasmine.";
-    const page = timeline();
+    const page = timeline(); // eslint-disable-line no-undef
     const btn = page.querySelector(".post-button");
     const titleInput = page.querySelector(".title");
     const textInput = page.querySelector(".message");
@@ -21,7 +21,7 @@ describe("publicatedPost", () => {
     btn.dispatchEvent(new Event("click"));
 
     expect(publicatedPost).toHaveBeenCalledTimes(1);
-    expect(publicatedPost).toHaveBeenCalledWith(title, message);
+    expect(publicatedPost).toHaveBeenCalledWith(title, message); // eslint-disable-line no-undef
   });
 });
 
@@ -33,7 +33,7 @@ describe("post", () => {
       user: "hgsyws2344d",
       id: "hydxbeychsd12",
     };
-    const page = card(item);
+    const page = card(item); // eslint-disable-line no-undef
     const title = page.querySelector(".title");
     const text = page.querySelector(".message");
     const user = page.querySelector(".user");
