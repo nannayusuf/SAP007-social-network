@@ -1,4 +1,4 @@
-import { signIn } from "./login.js";
+import { signIn } from "../src/templates/login.js"; // eslint-disable-line import/named
 
 describe("SignIn", () => {
   it("should be a function", () => {
