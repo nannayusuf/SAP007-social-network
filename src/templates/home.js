@@ -8,7 +8,8 @@ export default function home() {
 
   homePage.innerHTML = `
     <input type="checkbox" id=check>
-    <label for="check" class="label-user-icon-home"><img class="home-user-icon-posts" src="./images/user-icon.png" alt="ícone contorno do usuário"></label>
+    <img src="images/wowlogo_1.svg" class="logo">
+        <label for="check" class="label-user-icon-home"><img class="home-user-icon-posts" src="./images/user-icon.png" alt="ícone contorno do usuário"></label>
     <nav class="menu-home">
       <ul class="menu-options-home">
         <li><a class="link-menu-home" href="#posts">Perfil</a></li>
@@ -22,9 +23,8 @@ export default function home() {
         <div id="name" class="name-user">Olá, ${auth.currentUser.displayName}</div>
         <form class="form-post">
           <input type="text" id="title-post" class="title-post" placeholder="Título do quadrinho"/>
-          <textarea name="textarea" id="message" class="new-post-message" placeholder="Conte em mais de 20 caracteres sobre o quadrinho que você esta lendo"></textarea>
-          <span id="error-msg" class="error-msg"></span>
-          <div class="buttons-post-delete">
+          <textarea name="textarea" id="message" class="new-post-message" placeholder="Conta um pouco sobre o quadrinho que você esta lendo"></textarea>
+        <div class="buttons-post-delete">
           <button id="post-button" class="post-button">postar</button>
           <button id="delete-button" class="delete-button">excluir</button>
         </div>  
@@ -36,7 +36,7 @@ export default function home() {
       <ul id="all-posts" class="section-post"></ul>
     </div>
     `;
-
+  // Escrever um novo post
   const message = homePage.querySelector("#message");
   const titleHQ = homePage.querySelector("#title-post");
   const error = homePage.querySelector("#error-msg");
@@ -82,7 +82,8 @@ export default function home() {
     }
   });
 
-  // Quando clicar no botão excluir da nova postagem, antes de enviar, o campo fique limpo
+  /* Função para quando clickar no botão excluir da nova postagem, antes de enviar, 
+  o campo fique limpo*/
   const deleteButton = homePage.querySelector("#delete-button");
   deleteButton.addEventListener("click", (e) => {
     e.preventDefault();
@@ -104,3 +105,9 @@ export default function home() {
 
   return homePage;
 }
+
+/* const buttonPerfil = homePage.querySelector("#botao");
+buttonPerfil.addEventListener("click", (e) => {
+  e.preventDefault();
+  window.location.hash = "posts";
+}) */

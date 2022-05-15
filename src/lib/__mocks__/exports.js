@@ -26,3 +26,5 @@ export const arrayRemove = jest.fn();
 export const arrayUnion = jest.fn();
 export const registerUser = jest.fn();
 export const initializeApp = jest.fn();
+
+uid: "5hOGGsSyEFQrOVz2JFQOLL496Bj2" // user teste1
