@@ -16,8 +16,6 @@ export default function home() {
         <li><a id="link-logoff" class="link-menu-home">Sair</a></li>
       </ul>
     </nav>
-    <input type="search" class="field-search-home" placeholder="Buscar">
-    <button class="button-search-home">Buscar</button>
     <div id="new-post" class="section-new-post">
       <div class="new-post">
         <div id="name" class="name-user">Olá, ${auth.currentUser.displayName}</div>

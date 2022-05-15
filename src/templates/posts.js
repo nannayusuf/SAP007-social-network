@@ -15,8 +15,6 @@ export default function posts() {
         <li><a id="link-logoff" class="link-menu-post">Sair</a></li>
       </ul>
     </nav>
-      <input type="search" class="field-search" placeholder="Buscar">
-      <button class="button-search">Buscar</button> 
         
     <div id="new-post" class="section-new-post">
       <div class="new-post">
