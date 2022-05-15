@@ -1,3 +1,4 @@
+import "./lib/config-firebase.js";
 import login from "./templates/login.js";
 import register from "./templates/register.js";
 import home from "./templates/home.js";

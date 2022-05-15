@@ -1,5 +1,4 @@
-import { userLogout } from "../lib/auth-firebase.js";
-import { auth } from "../lib/config-firebase.js";
+import { userLogout, auth } from "../lib/auth-firebase.js";
 import { creatPost } from "../lib/firestore-firebase.js";
 import { printProfilePosts } from "../componentes/perfil.js";
 
@@ -68,7 +67,7 @@ export default function posts() {
     if (isValid) {
       creatPost(message.value, titleHQ.value)
         .then(() => {
-          printProfilePosts(profilePage)
+          printProfilePosts(profilePage);
           message.value = "";
           titleHQ.value = "";
         }).catch(() => {
@@ -93,7 +92,7 @@ export default function posts() {
   });
 
   // apenas os posts do usuario na tela
-  printProfilePosts(profilePage)
+  printProfilePosts(profilePage);
 
   // Função para sair da rede social
   const logOut = profilePage.querySelector("#link-logoff");

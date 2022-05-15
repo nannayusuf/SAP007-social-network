@@ -1,11 +1,4 @@
-// eslint-disable-next-line
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
-
-// eslint-disable-next-line
-import { getAuth } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
-
-// eslint-disable-next-line
-import { getFirestore } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
+import { initializeApp } from "./exports.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBEcRw-VST-DiVqt4Tjbjhdq5gjzcK1bqw",
@@ -16,6 +9,4 @@ const firebaseConfig = {
   appId: "1:1010304710305:web:04ce360783a12c256ce2e0",
 };
 
-const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
-export const db = getFirestore(app);
+export const app = initializeApp(firebaseConfig);

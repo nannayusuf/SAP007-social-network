@@ -1,5 +1,5 @@
 import { dislike, like, getPosts } from "../lib/firestore-firebase.js"; // eslint-disable-line import/no-cycle
-import { auth } from "../lib/config-firebase.js";
+import { auth } from "../lib/auth-firebase.js";
 
 export function publishingPosts(post) {
   const currentUser = auth.currentUser;
@@ -60,7 +60,7 @@ export function publishingPosts(post) {
 
 export function showPosts(homePage) {
   const showAllPosts = homePage.querySelector(".section-post");
-  showAllPosts.innerHTML = ''
+  showAllPosts.innerHTML = "";
   getPosts().then((allPosts) => {
     allPosts.forEach((item) => {
       const postElement = publishingPosts(item);
