@@ -7,6 +7,8 @@ export default function posts() {
   profilePage.classList.add("body-post");
 
   profilePage.innerHTML = `
+    <img src="images/wowlogo_1.svg" class="logo">
+
     <input type="checkbox" id=check>
     <label for="check" class="label-user-icon"><img class="profile-user-icon-posts" src="./images/user-icon.png" alt="ícone contorno do usuário"></label>
     <nav class="menu">
@@ -15,8 +17,6 @@ export default function posts() {
         <li><a id="link-logoff" class="link-menu-post">Sair</a></li>
       </ul>
     </nav>
-      <input type="search" class="field-search" placeholder="Buscar">
-      <button class="button-search">Buscar</button> 
         
     <div id="new-post" class="section-new-post">
       <div class="new-post">

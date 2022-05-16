@@ -1,4 +1,4 @@
-import { signIn, validateEmail } from "../lib/auth-firebase.js"; // eslint-disable-line no-unused-vars
+import { signIn, registerGoogle, validateEmail } from "../lib/auth-firebase.js"; // eslint-disable-line no-unused-vars
 
 export default function login() {
   const container = document.createElement("div");
@@ -61,6 +61,24 @@ export default function login() {
     } else {
       loginError.innerHTML = "Preencha o campo de E-mail";
     }
+  });
+
+  const googleButton = container.querySelector(".button-google-register");
+  googleButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    registerGoogle()
+      .then(() => {
+        window.location.hash = "home";
+      })
+      .catch((error) => {
+        if (error.code === "auth/invalid-email") {
+          loginError.style.color = "red";
+          loginError.innerHTML = "E-mail inválido";
+        } else if (error.code === "auth/invalid-password") {
+          loginError.style.color = "red";
+          loginError.innerHTML = "Senha inválida";
+        }
+      });
   });
 
   return container;
