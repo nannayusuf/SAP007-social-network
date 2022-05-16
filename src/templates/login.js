@@ -68,7 +68,7 @@ export default function login() {
     e.preventDefault();
     registerGoogle()
       .then(() => {
-        window.location.hash = "home";
+        window.location.hash = "#home";
       })
       .catch((error) => {
         if (error.code === "auth/invalid-email") {
