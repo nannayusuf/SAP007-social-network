@@ -1,75 +1,146 @@
 .body-home-page {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .logo {
-    width: 10%;
-    height: 10%;
-    float: inline-start;
+  width: 10%;
+  height: 10%;
+  float: right;
 }
 
 .home-user-icon-posts {
-    width: 30px;
-    height: 30px;
-    margin-top: 9px;
-    margin-left: 255px;
+  width: 30px;
+  height: 30px;
 }
 
 .link-menu-home {
-    text-decoration: none;
-    display: block;
-    color: white;
-    padding: 20px 5px;
-    text-align: center;
-    cursor: pointer;
+  text-decoration: none;
+  display: block;
+  color: white;
+  padding: 20px 5px;
+  text-align: center;
+  cursor: pointer;
 }
 
 .menu-home {
-    background: rgba(16, 16, 16, .5);
-    width: 124px;
-    height: 100%;
-    left: -124px;
-    position: absolute;
-    transition: all .5s;
+  background: rgba(16, 16, 16, .5);
+  width: 193px;
+  height: 100%;
+  left: -193px;
+  position: absolute;
+  transition: all .5s;
 }
 
 .menu-options-home {
-    list-style: none;
-    top: 50px;
-    position: absolute;
-    padding: 0;
-    margin: 0;
-    width: 100%;
+  list-style: none;
+  top: 50px;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
 
 .post-button {
-    background-color: #FFD147;
+  background-color: #FFD147;
 }
 
 input[type="checkbox"]:checked~nav {
-    transform: translateX(124px);
+  transform: translateX(124px);
 }
 
 input[type="checkbox"] {
-    display: none;
+  display: none;
 }
 
 .label-user-icon-home {
-    padding: 15px;
-    position: absolute;
-    z-index: 1;
+  padding: 15px;
+  position: absolute;
+  z-index: 1;
 }
 
-/* .section-post-published {
-    width: 79%;
-    height: 263px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background: #ffd147;
-    border-radius: 10px;
-    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.2);
-    padding: 12px 25px;
-    margin: 30px 11px 0px;
-  } */
+.section-posts-container {
+  max-width: 900px;
+  margin: 0px 30px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .home-user-icon-posts {
+    width: 40px;
+    height: 40px;
+    margin-top: 32px;
+    margin-left: 29px;
+  }
+
+  .menu {
+    width: 193px;
+    left: -193px;
+  }
+
+  .menu-options {
+    top: 80px;
+    width: 124px;
+  }
+
+  .link-menu-post {
+    font-size: 15px;
+  }
+
+  input[type="checkbox"]:checked~nav {
+    transform: translateX(193px);
+  }
+
+  /*.section-posts-container {
+    margin-left: 89px;
+    margin-top: 44px;
+  }*/
+
+  .new-post {
+    width: 550px;
+    height: 271px;
+  }
+
+  .name-user {
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .home-user-icon-posts {
+    width: 45px;
+    height: 45px;
+    margin-top: 32px;
+    margin-left: 221px;
+  }
+
+  .menu {
+    width: 193px;
+    left: -193px;
+  }
+
+  .menu-options {
+    top: 80px;
+    width: 124px;
+  }
+
+  .link-menu-post {
+    font-size: 20px;
+  }
+
+  input[type="checkbox"]:checked~nav {
+    transform: translateX(193px);
+  }
+
+  /*.section-posts-container {
+    margin: 0 auto;
+  }*/
+
+  .new-post {
+    width: 769px;
+    height: 271px;
+  }
+
+  .name-user {
+    font-size: 20px;
+  }
+}

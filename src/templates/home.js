@@ -7,15 +7,17 @@ export default function home() {
   homePage.classList.add("body-home-page");
 
   homePage.innerHTML = `
-    <input type="checkbox" id=check>
     <img src="images/wowlogo_1.svg" class="logo">
-        <label for="check" class="label-user-icon-home"><img class="home-user-icon-posts" src="./images/user-icon.png" alt="ícone contorno do usuário"></label>
+
+    <input type="checkbox" id=check>
+    <label for="check" class="label-user-icon-home"><img class="home-user-icon-posts" src="./images/user-icon.png" alt="ícone contorno do usuário"></label>
     <nav class="menu-home">
       <ul class="menu-options-home">
         <li><a class="link-menu-home" href="#posts">Perfil</a></li>
         <li><a id="link-logoff" class="link-menu-home">Sair</a></li>
       </ul>
     </nav>
+
     <div id="new-post" class="section-new-post">
       <div class="new-post">
         <div id="name" class="name-user">Olá, ${auth.currentUser.displayName}</div>

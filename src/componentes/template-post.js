@@ -10,7 +10,8 @@ export function publishingPosts(post) {
   const formatDate = new Date(time.seconds * 1000 + time.nanoseconds / 1000000);
   const date = formatDate.toLocaleDateString("pt-br");
 
-  templatePost.innerHTML = `    
+  templatePost.innerHTML = `
+    <div class="section-post">
       <div class="section-post-published">
         <p class="username-post">${post.user}</p>
         <p class="date-post">${date}</p>
@@ -23,6 +24,7 @@ export function publishingPosts(post) {
           <p class="like-counter" id="like-${post.id}">${post.like.length}</p>
         </div>
       </div>
+    </div> 
     `;
 
   const likeImage = templatePost.querySelector(".img-like");
