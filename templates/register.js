@@ -109,7 +109,7 @@ export default function formRegister() {
     e.preventDefault();
     registerGoogle()
       .then(() => {
-        window.location.hash = "#home";
+        window.location.hash = "home";
       })
       .catch((error) => {
         if (error.code === "auth/account-exists-with-different-credential") {
@@ -124,7 +124,7 @@ export default function formRegister() {
   const goBackButton = registerPage.querySelector("#button-register-back");
   goBackButton.addEventListener("click", (e) => {
     e.preventDefault();
-    window.location.hash = "#login";
+    window.location.hash = "login";
   });
 
   return registerPage;
