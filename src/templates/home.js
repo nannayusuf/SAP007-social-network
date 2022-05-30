@@ -1,5 +1,5 @@
 import { creatPost } from "../lib/firestore-firebase.js";
-import { userLogout } from "../lib/auth-firebase.js";
+import { userLogout, auth } from "../lib/auth-firebase.js";
 import { showPosts } from "../componentes/template-post.js";
 
 export default function home() {
@@ -7,6 +7,7 @@ export default function home() {
   homePage.classList.add("body-home-page");
 
   homePage.innerHTML = `
+
     <input type="checkbox" id=check>
     <img src="./images/wowlogo_1.svg" class="logo">
         <label for="check" class="label-user-icon-home"><img class="home-user-icon-posts" src="./images/user-icon.png" alt="ícone contorno do usuário"></label>
@@ -16,11 +17,10 @@ export default function home() {
         <li><a id="link-logoff" class="link-menu-home">Sair</a></li>
       </ul>
     </nav>
-    <input type="search" class="field-search-home" placeholder="Buscar">
-    <button class="button-search-home">Buscar</button>
+
     <div id="new-post" class="section-new-post">
       <div class="new-post">
-        <div id="name" class="name-user">nome</div>
+        <div id="name" class="name-user">Olá, ${auth.currentUser.displayName}</div>
         <form class="form-post">
           <input type="text" id="title-post" class="title-post" placeholder="Título do quadrinho"/>
           <textarea name="textarea" id="message" class="new-post-message" placeholder="Conta um pouco sobre o quadrinho que você esta lendo"></textarea>
@@ -82,8 +82,8 @@ export default function home() {
     }
   });
 
-  /* Função para quando clickar no botão excluir da nova postagem, antes de enviar, 
-  o campo fique limpo*/
+  /* Função para quando clickar no botão excluir da nova postagem, antes de enviar,
+  o campo fique limpo */
   const deleteButton = homePage.querySelector("#delete-button");
   deleteButton.addEventListener("click", (e) => {
     e.preventDefault();
