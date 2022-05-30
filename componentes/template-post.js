@@ -50,9 +50,9 @@ export function publishingPosts(post) {
 
   function checkLikes() {
     if (post.like.includes(currentUser.uid)) {
-      return "./images/liked.png";
+      return "src","./images/liked.png";
     }
-    return "./images/like.png";
+    return "src","./images/like.png";
   }
 
   return templatePost;

@@ -8,7 +8,7 @@ export default function home() {
 
   homePage.innerHTML = `
     <input type="checkbox" id=check>
-    <img src="images/wowlogo_1.svg" class="logo">
+    <img src="./images/wowlogo_1.svg" class="logo">
         <label for="check" class="label-user-icon-home"><img class="home-user-icon-posts" src="./images/user-icon.png" alt="ícone contorno do usuário"></label>
     <nav class="menu-home">
       <ul class="menu-options-home">
