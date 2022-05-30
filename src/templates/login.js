@@ -51,13 +51,15 @@ export default function login() {
         .catch((error) => {
           const errorCode = error.code;
           if (errorCode === "email-already-in-use") {
+            loginError.style.color = "red";
             loginError.innerHTML = "Não há registro de usuário correspondente a este e-mail";
           } else if (errorCode === "auth/wrong-password") {
+            loginError.style.color = "red";
             loginError.innerHTML = "Senha inválida";
           }
         });
-/*     } else {
-      loginError.innerHTML = "Preencha o campo de E-mail"; */
+    } else {
+      loginError.innerHTML = "Preencha o campo de E-mail";
     }
   });
 
