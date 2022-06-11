@@ -5,7 +5,7 @@ A WOW é uma rede social voltada para a discussão e compartilhamento de quadrin
 
 Na sociologia, o conceito de rede social é utilizado para analisar interações entre indivíduos, grupos, organizações ou até sociedades inteiras desde o final do século XIX. A partir da década de 90, as redes sociais também migraram para o ambiente virtual, nesse intuito pensamos na Artem, uma rede social criada para a comunidade das artes, pensada em trazer a arte para cada usuário de forma simples e intuitiva.
 
-Através da aplicação é possível conhecer, descobrir, comentar e discutir artistas novos e os já consagrados, arte, histórias, sagas e editoras. Oferecemos uma aplicação de uso intuitivo com design moderno, simples e interface amigável. 
+Através da aplicação é possível conhecer, descobrir, comentar e discutir artistas novos e os já consagrados, arte, histórias, sagas e editoras. Oferecemos uma aplicação de uso intuitivo com design moderno, simples e interface amigável. Para acessar [clique aqui](https://jaquelinedeoliveira93.github.io/SAP007-social-network/) e utilize como email: teste@teste.com e senha: 123456.
   
   
 <div align="center">  
